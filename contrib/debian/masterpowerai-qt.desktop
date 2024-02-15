@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=masterpowerai Core
+Comment=masterpowerai P2P Cryptocurrency
+Comment[de]=Verbinde mit dem masterpowerai peer-to-peer Netzwerk
+Comment[fr]=masterpowerai, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=masterpowerai, eşten eşe kriptografik sanal para birimi
+Exec=masterpowerai-qt %u
+Terminal=false
+Type=Application
+Icon=masterpowerai128
+MimeType=x-scheme-handler/masterpowerai;
+Categories=Office;Finance;P2P;Network;Qt;
+StartupWMClass=masterpowerai-qt

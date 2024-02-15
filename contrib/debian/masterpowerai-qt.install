@@ -1,0 +1,6 @@
+usr/local/bin/masterpowerai-qt usr/bin
+share/pixmaps/masterpowerai32.xpm usr/share/pixmaps
+share/pixmaps/masterpowerai16.xpm usr/share/pixmaps
+share/pixmaps/masterpowerai128.png usr/share/pixmaps
+debian/masterpowerai-qt.desktop usr/share/applications
+debian/masterpowerai-qt.protocol usr/share/kde4/services/

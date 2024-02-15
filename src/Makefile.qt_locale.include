@@ -1,0 +1,22 @@
+QT_TS = \
+  qt/locale/masterpowerai_ar.ts \
+  qt/locale/masterpowerai_bg.ts \
+  qt/locale/masterpowerai_de.ts \
+  qt/locale/masterpowerai_en.ts \
+  qt/locale/masterpowerai_es.ts \
+  qt/locale/masterpowerai_fi.ts \
+  qt/locale/masterpowerai_fr.ts \
+  qt/locale/masterpowerai_it.ts \
+  qt/locale/masterpowerai_ja.ts \
+  qt/locale/masterpowerai_ko.ts \
+  qt/locale/masterpowerai_nl.ts \
+  qt/locale/masterpowerai_pl.ts \
+  qt/locale/masterpowerai_pt.ts \
+  qt/locale/masterpowerai_ro.ts \
+  qt/locale/masterpowerai_ru.ts \
+  qt/locale/masterpowerai_sk.ts \
+  qt/locale/masterpowerai_th.ts \
+  qt/locale/masterpowerai_tr.ts \
+  qt/locale/masterpowerai_vi.ts \
+  qt/locale/masterpowerai_zh_CN.ts \
+  qt/locale/masterpowerai_zh_TW.ts

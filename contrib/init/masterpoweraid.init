@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+#
+#  masterpoweraid The masterpowerai Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: masterpoweraid
+# processname: masterpoweraid
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/masterpoweraid, see below
+if [ -f /etc/sysconfig/masterpoweraid ]; then
+        . /etc/sysconfig/masterpoweraid
+fi
+
+RETVAL=0
+
+prog=masterpoweraid
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/masterpoweraid
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/masterpoweraid}
+
+# masterpoweraid defaults to /usr/bin/masterpoweraid, override with BITCOIND_BIN
+masterpoweraid=${BITCOIND_BIN-/usr/bin/masterpoweraid}
+
+# masterpoweraid opts default to -disablewallet, override with BITCOIND_OPTS
+masterpoweraid_opts=${BITCOIND_OPTS--disablewallet}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $masterpoweraid $masterpoweraid_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog -t600
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
